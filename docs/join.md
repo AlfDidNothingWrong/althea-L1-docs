@@ -4,13 +4,13 @@
 
 Please see the [validator system setup](validator-system-setup.md) for recommended machine specs
 
-Althea L1 mainnet dress rehersal testnet has already launched, so this guide is for joining the already active testnet. The first setup is to setup the CLI
+Althea L1 mainnet has launched, so this guide is for joining the already active set. The first setup is to setup the CLI.
 
 ## Download Althea L1
 
 If you have a system architecture other than x86_64 Linux you will need to [grab the source code](https://github.com/althea-net/althea-l1) and build your own binary. But the vast majority of users should be able to download the release below.
 
-**_NOTE:_**  `v1.4.0` does not sync past block 271, so use `v1.3.0` if starting from genesis with a new validator until
+**_NOTE:_**  `v1.4.0` does not sync past block 271, so use `v1.3.0` if starting a fresh validator. When you reach block 271, the validator will begin producing errors. At that point you can stop your validator, upgrade to the newer binary, and continue syncing. If you are using a snapshot/state sync, you can skip this step and instead use the latest binary.
 
 ```bash
 wget https://github.com/AltheaFoundation/althea-L1/releases/download/v1.3.0/althea-linux-amd64
